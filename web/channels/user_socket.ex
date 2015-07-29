@@ -2,7 +2,7 @@ defmodule Matcho.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", Matcho.RoomChannel
+  channel "rooms:*", Matcho.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -19,6 +19,7 @@ defmodule Matcho.UserSocket do
   def connect(_params, socket) do
     {:ok, socket}
   end
+
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
